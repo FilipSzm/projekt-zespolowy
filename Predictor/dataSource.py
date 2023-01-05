@@ -4,6 +4,7 @@ import time
 import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 
 # from webdriver_manager.firefox import GeckoDriverManager
@@ -35,7 +36,7 @@ def namesScraper():
 
         # time.sleep(3)
         if i == 1:
-            driver.find_element_by_css_selector('.fc-button.fc-cta-consent.fc-primary-button').click()
+            driver.find_element(By.CSS_SELECTOR, '.fc-button.fc-cta-consent.fc-primary-button').click()
             time.sleep(3)
             driver.refresh()
             # time.sleep(3)
